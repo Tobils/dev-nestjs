@@ -1,0 +1,49 @@
+bbody {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #322F56;
+    text-align: left;
+    background-color: #fff;
+}
+
+.merriweather {
+    font-family: "Merriweather", serif;
+}
+
+.h3 {
+    font-size: 1.75rem;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.btn {
+    margin: 30px 0px 0px;
+}
+
+.w-320px {
+    width: 320px;
+}
+
+#link {
+    color: black;
+}
+
+img {
+    width: 20%;
+    height: 20%;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
+}
+
+a {
+    /* color: #322F56; */
+    color: black;
+    cursor: pointer;
+}

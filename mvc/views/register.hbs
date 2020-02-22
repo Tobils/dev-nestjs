@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href=’http://fonts.googleapis.com/css?family=Merriweather&#8217; rel=’stylesheet’ type=’text/css’>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {{ pageTitle }} 
+    </title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/img/logo-pasains.png">
+</head>
+
+    <body>
+
+        <div class="container mt-5 h-100vh">
+            <div class="row align-items-center justify-content-center h-100">
+
+
+                <div class="w-320px">
+                    <i class="fas fa-arrow-left"></i>
+                    <a id="link" style="font-size: 14px;" href="/"> Kembali  </a>
+
+                    <h1 class="merriweather font-weight-bold mt-4 pt-1">
+                         {{pageTitle}} 
+                    </h1>
+                    <p class="text-secondary h8 mt-1 mb-5 ">
+                         {{contentTitle}} 
+                    </p>
+
+                    <form action="/users/register" method="POST" class="form-signin" oninput='confirm_password.setCustomValidity(confirm_password.value != password.value ? "Passwords tidak cocok." : "")'>
+
+                        <div class="input-group margin-bottom-sm mb-3">
+                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                            <input class="form-control" required pattern=".*\S+.*" title="This field is required" type="text" placeholder="Username" name="username">
+                        </div>
+
+                        <div class="input-group margin-bottom-sm mb-3">
+                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                            <input class="form-control" required pattern=".*\S+.*" title="This field is required" type="email" placeholder="Email address" name="email">
+                        </div>
+
+                        <div class="input-group margin-bottom-sm mb-3">
+                            <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                            <input class="form-control" required pattern=".*\S+.*" title="This field is required" type="text" placeholder="Phone Number" name="phone_number">
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" required pattern=".*\S+.*" title="This field is required" type="password" placeholder="Password" name="password">
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock fa-fw"></i></span>
+                            <input class="form-control" required pattern=".*\S+.*" title="This field is required" type="password" placeholder="Confirm Password" name="confirm_password">
+                        </div>
+
+                        <button type="submit" class="btn btn-submit btn-info font-weight-medium btn-block">Buat Akun</button>
+
+                    </form>
+
+
+                    <!-- end col  -->
+                </div>
+
+                <!-- end row  -->
+            </div>
+            <!-- end container  -->
+        </div>
+
+    </body>
+
+    </html>

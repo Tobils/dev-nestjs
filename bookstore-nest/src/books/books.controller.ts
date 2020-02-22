@@ -31,6 +31,6 @@ export class BooksController {
     async deleteBook(@Query() query) {
         const books = await this.booksService.deleteBook(query.bookID);
         console.log(query.bookID)
-        return books; 
+        return books;  
     }
 }
