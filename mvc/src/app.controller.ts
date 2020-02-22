@@ -4,7 +4,7 @@ import { Get, Controller, Render } from '@nestjs/common'
 export class AppController{
     @Get()   
     @Render('login')
-    root(){
+    home(){
         return({
             pageTitle: "Sign In",
             contentTitle :"Never Ending Brotherhood !"
