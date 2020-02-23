@@ -130,6 +130,7 @@ $ npm install --save uuid
 
 ## Controller
 ```js
+// Lesson 14. creating task {service dan controller}
 // create new task cara pertama, 
 @Post()
 createTask(@Body() body){
@@ -151,4 +152,37 @@ createTask(
 // description :  test decsription
 ```
 
+## Data Trnasfer Object
+```bash
+# problem nya : we lose sense of reliability of data
+# we don not have a unified a way to define the data looks like for all the process
+# A Data Transfer Object (DTO) an object that carries data between proceses.
+# DTO can be usefull for validation
+# a DTO is not a model definition. It defines the shape of data for a specific data, for example - creating a task
+# can be define  using an interface or a class
+```
+
+## Implementasi DTO
+```js
+// change controller  create new task
+@Post()
+createTask(
+    @Body('title') title:String,
+    @Body('description') description:String
+    ): Task {
+    return this.tasksService.createTask(title, description)
+}
+
+// menjadi create new task
+@Post()
+createTask(@Body() createTaskDto : CreateTaskDto): Task {
+    return this.tasksService.createTask(createTaskDto)
+}
+```
+
+## Searching dan Filtering
+```bash
+# Learn 22
+# modify service dan menambahkan DTO get-task-filter.dto.ts untuk status dan search variable
+```
 
