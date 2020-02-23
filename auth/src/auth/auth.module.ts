@@ -7,7 +7,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { jwtConstants } from './constant';
 import { JwtStrategy } from './jwt.strategy';
 
-
+// secret untuk jwt diganti denan file pem 
 @Module({
   imports: [
     UsersModule, 

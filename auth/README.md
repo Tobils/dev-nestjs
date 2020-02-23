@@ -95,6 +95,9 @@ $ curl http://localhost:3000/profile -H "Authorization: Bearer eyJhbGciOiJIUzI1N
 $ # result -> {"userId":1,"username":"john"}
 ```
 
+
+## Setting jwt dengan file private.pem dan public.pem
+
 ## Resources
 - [Documentations](https://docs.nestjs.com/techniques/authentication)
 - [github discuss](https://github.com/nestjs/jwt/issues/63)
