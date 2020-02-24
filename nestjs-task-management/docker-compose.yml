@@ -1,0 +1,37 @@
+version: '3'
+services: 
+    db:
+        image: postgres
+        ports:
+            - "5432:5432"
+        expose:
+            - "5432"
+        environment:
+            POSTGRES_PASSWORD: password
+            # POSTGRES_DB: taskmanagement
+            POSTGRES_USER: tobil
+            POSTGRES_PASSWORD: root
+        #volumes:
+        #- my-datavolume:/var/lib/mysql
+#     app:
+#         # image: 
+#         build: .
+#         container_name: pulejajar
+#         networks: 
+#             - docker_mevn
+#         ports:
+#             - "4040:4040"
+#         expose: 
+#             - "4040"
+#         environment:
+#             DB_HOST: db
+#             DB_USER: root
+#             DB_PASS: password
+#             DB_PORT: "3306"
+#             DB_NAME: pulejajar
+#             PORT: 4040
+# networks: 
+#     docker_mevn:
+#         driver: bridge
+#volumes:
+#my-datavolume:

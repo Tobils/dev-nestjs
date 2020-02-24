@@ -186,3 +186,44 @@ createTask(@Body() createTaskDto : CreateTaskDto): Task {
 # modify service dan menambahkan DTO get-task-filter.dto.ts untuk status dan search variable
 ```
 
+## NetsJs pipes
+```bash
+# pipe operate on the argument to be processed by routes handler, just before the handler is called.
+# pipe can perform data transformation or data validation
+# pipe can be asynchronous
+# usefull pipe with @nestjs/common
+
+
+# digunakan untuk validasi data, data tidak boleh kosong
+# install package
+$ npm install class-validator class-transformer --save
+```
+
+## Postgre with docker
+1. define docker compose postgre
+```yml
+version: '3'
+services: 
+    db:
+        image: postgres
+        ports:
+            - "5432:5432"
+        expose:
+            - "5432"
+        environment:
+            POSTGRES_ROOT_PASSWORD: password
+            POSTGRES_DB: taskmanagement
+            POSTGRES_USER: tobil
+            POSTGRES_PASSWORD: root
+```
+2. run docker compose : `docker-compose up -d`
+
+
+## Object Relational Mapping (ORM)
+```bash
+# ORM is a technique that lets you query and manipulate data from a database, using an object-oriented paradigm.
+# install typeorm
+$ npm install --save @nestjs/typeorm typeorm pg
+
+# auto load entities dengan menambahkan autoLoadEntities: true, pada file typeorm.config.ts
+```

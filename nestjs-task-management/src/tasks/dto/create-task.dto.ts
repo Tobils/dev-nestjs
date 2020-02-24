@@ -1,5 +1,10 @@
+import { IsNotEmpty } from 'class-validator'
+
 // create task dto 
 export class CreateTaskDto{
-    title: String;
-    description: String;
+    @IsNotEmpty()
+    title: string;
+
+    @IsNotEmpty()
+    description: string;
 }

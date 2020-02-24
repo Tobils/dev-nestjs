@@ -18,7 +18,7 @@ export class UsersController {
     password(){
         return({
             pageTitle: "Lupa Password",
-        contentTitle: "Kembalikan akun, cek email"
+            contentTitle: "Kembalikan akun, cek email"
         })
     }
 
