@@ -246,4 +246,8 @@ $ npm install bcrypt --save
 ```bash
 # install dependency
 $ npm install @nestjs/jwt @nestjs/passport passport passport-jwt
+
+# implement ke /Tasks
+@Controller('tasks')
+@UseGuards(AuthGuard())
 ```
