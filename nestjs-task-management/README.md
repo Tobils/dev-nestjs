@@ -227,3 +227,23 @@ $ npm install --save @nestjs/typeorm typeorm pg
 
 # auto load entities dengan menambahkan autoLoadEntities: true, pada file typeorm.config.ts
 ```
+
+## Auth
+```bash
+# generate module, service dan controller
+$ nest g module auth
+$ nest g service auth --no-spec
+$ nest g controller auth --no-spec
+
+# DTO harus cntains : 8 character dengan Uppercase, lowercse dan number
+(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/)
+
+# hash salt menggunakan bcrypt
+$ npm install bcrypt --save
+```
+
+## JWT [Json Web Token]
+```bash
+# install dependency
+$ npm install @nestjs/jwt @nestjs/passport passport passport-jwt
+```

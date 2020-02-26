@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-task-management",
+  "name": "http-module",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -22,22 +22,10 @@
   "dependencies": {
     "@nestjs/common": "^6.10.14",
     "@nestjs/core": "^6.10.14",
-    "@nestjs/jwt": "^6.1.1",
-    "@nestjs/passport": "^6.2.0",
     "@nestjs/platform-express": "^6.10.14",
-    "@nestjs/typeorm": "^6.3.3",
-    "bcrypt": "^4.0.0",
-    "class-transformer": "^0.2.3",
-    "class-validator": "^0.11.0",
-    "dotenv": "^8.2.0",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "pg": "^7.18.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.4",
-    "typeorm": "^0.2.22",
-    "uuid": "^3.4.0"
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.13.2",
