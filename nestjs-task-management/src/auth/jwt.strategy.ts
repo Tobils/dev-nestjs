@@ -12,6 +12,7 @@ export class JwtStrategy extends PassportStrategy(Strategy){
         @InjectRepository(UserRepository)
         private userRepository: UserRepository,
     ){
+        // verify
         super({
             jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
             secretOrKey: 'ManJaddaWaJada'

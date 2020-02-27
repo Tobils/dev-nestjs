@@ -251,3 +251,30 @@ $ npm install @nestjs/jwt @nestjs/passport passport passport-jwt
 @Controller('tasks')
 @UseGuards(AuthGuard())
 ```
+
+## Hubungan Task dan User
+```js
+// hubungan dnega none to many dan many to one
+
+@OneToMany(type => Task, task => task.user, { eager:true })
+// One to Many artinya satu user bisa memiliki banyak tugas
+
+(type => Task)
+// type data yang diharapkan berupa Task
+
+(, task => task.user)
+// tujuan nya agar terikat dengan user 
+
+{ eager: true}
+// agar User dapat secara langsung retrieve tasks, jika di setting false maka tasks tidak dapat retrieve user
+```
+
+## Logging
+```js
+import { Logger } from '@nestjs/common';
+const logger = new Logger('bootstrap');
+logger.log(`application listening on port ${process.env.PORT}`)
+
+// output 
+[Nest] 5083   - 02/27/2020, 8:47:20 AM   [bootstrap] application listening on port 3000
+```
