@@ -278,3 +278,10 @@ logger.log(`application listening on port ${process.env.PORT}`)
 // output 
 [Nest] 5083   - 02/27/2020, 8:47:20 AM   [bootstrap] application listening on port 3000
 ```
+
+## Configuration
+```bash
+# install
+$ npm install config
+
+```

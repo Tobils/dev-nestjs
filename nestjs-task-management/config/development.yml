@@ -1,0 +1,8 @@
+db:
+  host: 'localhost'
+  username: 'tobil'
+  password: 'root'
+  synchronize: true
+
+jwt:
+  secret: 'ManJaddaWajada'
